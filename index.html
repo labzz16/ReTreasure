@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReTreasure</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">ReTreasure</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#cart">Cart</a></li>
+      <li><a href="#swap">Swap</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <h1>Welcome to ReTreasure</h1>
+    <p>Giving Waste a New Life, One Treasure at a Time 🌱</p>
+  </header>
+
+  <!-- Products Section -->
+  <section id="products" class="products">
+    <h2>Available Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="C:\Users\dell\OneDrive\ドキュメント\Desktop\laptop.jpg" alt="Laptop">
+        <h3>Laptop</h3>
+        <p>Price: ₹5000</p>
+        <p>Carbon Saved: 2kg CO₂</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="donate">Donate</button>
+        <button class="swap">Swap</button>
+      </div>
+      <div class="product-card">
+        <img src="C:\Users\dell\OneDrive\ドキュメント\Desktop\bottle.jpg" alt="Tumbler">
+        <h3>Tumbler</h3>
+        <p>Price: ₹350</p>
+        <p>Carbon Saved: 1kg CO₂</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="donate">Donate</button>
+        <button class="swap">Swap</button>
+      </div>
+      <div class="product-card">
+        <img src="C:\Users\dell\OneDrive\ドキュメント\Desktop\shirt.jpg" alt="Vintage T-shirt">
+        <h3>Vintage T-shirt</h3>
+        <p>Price: ₹300</p>
+        <p>Carbon Saved: 5kg CO₂</p>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="donate">Donate</button>
+        <button class="swap">Swap</button>
+      </div>
+    </div>
+
+    <!-- AI Story Generator -->
+    <div class="story-generator">
+      <h3>✨ Give your item a story</h3>
+      <button onclick="generateStory()">Generate Story</button>
+      <p id="story-output"></p>
+    </div>
+  </section>
+
+  <!-- Dashboard Section -->
+  <section id="dashboard" class="dashboard">
+    <h2>Eco Friendly and Sustainable</h2>
+    <div class="profile-info">
+      <img src="dash.jpg" alt="User Profile">
+      <h3>Without Nature, there's no future</h3>
+      <p>Upcycled: 12 Items</p>
+      <p>Carbon Saved: 24kg CO₂</p>
+    </div>
+
+    <!-- Eco Impact Meter -->
+    <div class="eco-impact">
+      <h3>🌍 Your Eco Impact</h3>
+      <p>You have saved <strong>15kg CO₂</strong> and <strong>120L water</strong> by thrifting!</p>
+      <div class="eco-bar">
+        <div class="eco-fill" style="width: 60%;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <div class="cart-items"></div>
+    <label>
+      <input type="checkbox" id="offsetCheck"> 🌱 Add ₹10 to plant a tree
+    </label>
+    <p id="cart-total">Total: ₹500</p>
+    <button id="checkout">Checkout</button>
+  </section>
+
+  <!-- Swap Matchmaking Section -->
+  <section id="swap" class="swap">
+    <h2>🔄 Swap Matchmaking</h2>
+    <div class="swap-card" id="swap-card">
+      <img src="https://via.placeholder.com/300" alt="Item to swap">
+      <h3>Bluetooth Speaker</h3>
+      <p>Swap suggestion: Your Headphones 🎧</p>
+      <div class="swap-buttons">
+        <button onclick="nextSwap()">❌ Skip</button>
+        <button onclick="acceptSwap()">✅ Swap</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ReTreasure | Giving Waste a New Life</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

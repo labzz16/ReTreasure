@@ -1,0 +1,381 @@
+/* ==============================
+   VARIABLES
+============================== */
+:root {
+    --primary: #00b894; /* Green accent */
+    --primary-dark: #009977;
+    --light: #f5f5f5;
+    --dark: #222;
+    --gray: #ccc;
+    --font: 'Segoe UI', sans-serif;
+}
+
+/* ==============================
+   GLOBAL STYLES
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==============================
+   NAVBAR
+============================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+    color: #fff;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar .nav-links li a:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   HERO SECTION
+============================== */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--primary-dark);
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* ==============================
+   PRODUCTS GRID
+============================== */
+.products {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--primary-dark);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid var(--gray);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.product-card p {
+    margin-bottom: 0.5rem;
+}
+
+.product-card button {
+    margin: 0.3rem 0;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+    width: 90%;
+}
+
+.add-to-cart {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.add-to-cart:hover {
+    background-color: var(--primary-dark);
+}
+
+.donate {
+    background-color: #55efc4;
+    color: var(--dark);
+}
+
+.donate:hover {
+    background-color: #45d0a8;
+}
+
+.swap {
+    background-color: #81ecec;
+    color: var(--dark);
+}
+
+.swap:hover {
+    background-color: #63d3d3;
+}
+
+/* ==============================
+   STORY GENERATOR
+============================== */
+.story-generator {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid var(--gray);
+    border-radius: 12px;
+    background: #fff;
+}
+
+.story-generator button {
+    margin-top: 0.5rem;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+}
+
+#story-output {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--primary-dark);
+}
+
+/* ==============================
+   DASHBOARD
+============================== */
+.dashboard {
+    padding: 3rem 2rem;
+    background-color: #f0fdf4;
+    text-align: center;
+}
+
+.profile-info img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.profile-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.profile-info p {
+    margin-bottom: 0.3rem;
+}
+
+/* Eco Impact Meter */
+.eco-impact {
+    margin-top: 2rem;
+}
+
+.eco-bar {
+    width: 80%;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    margin: 0.5rem auto;
+}
+
+.eco-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+/* ==============================
+   CART
+============================== */
+.cart {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cart-items p {
+    margin-bottom: 0.3rem;
+}
+
+#checkout {
+    margin-top: 1rem;
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary);
+    color: #fff;
+    cursor: pointer;
+}
+
+#checkout:hover {
+    background-color: var(--primary-dark);
+}
+
+#offsetCheck {
+    margin-right: 0.5rem;
+}
+
+/* ==============================
+   SWAP SECTION
+============================== */
+.swap {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.swap-card {
+    max-width: 300px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 1rem;
+}
+
+.swap-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.swap-card h3 {
+    margin-bottom: 0.3rem;
+}
+
+.swap-card p {
+    margin-bottom: 0.8rem;
+}
+
+.swap-buttons button {
+    margin: 0 0.3rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.swap-buttons button:first-child {
+    background-color: #ff7675;
+    color: #fff;
+}
+
+.swap-buttons button:last-child {
+    background-color: #55efc4;
+    color: var(--dark);
+}
+
+.swap-buttons button:first-child:hover {
+    background-color: #e55353;
+}
+
+.swap-buttons button:last-child:hover {
+    background-color: #45d0a8;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+    background: var(--primary-dark);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* ==============================
+   MEDIA QUERIES
+============================== */
+@media(max-width:768px){
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .swap-card img {
+        height: 180px;
+    }
+}
+
+@media(max-width:480px){
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .product-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .swap-card img {
+        height: 150px;
+    }
+}
